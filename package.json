@@ -1,11 +1,11 @@
 {
-  "name": "react-starter",
+  "name": "PFCLS",
   "version": "0.0.1",
   "description": "Starter Frontend App using React, TypeScript, WebPack and Karma/Mocha",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/felicienfrancois/react-starter.git"
+    "url": "https://github.com/felicienfrancois/PFCLS.git"
   },
   "author": {
     "name": "Félicien François",
