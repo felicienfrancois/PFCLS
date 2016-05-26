@@ -22,7 +22,7 @@ export class CountDown extends React.Component<CountDownProps, CountDownState> {
     
     componentDidMount() {
         this.setState({ secondsRemaining: this.props.secondsRemaining });
-        this.interval = setInterval(this.tick, 1000);
+        this.interval = setInterval(this.tick.bind(this), 1000);
     }
     
     componentWillUnmount() {
