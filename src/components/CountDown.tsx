@@ -6,7 +6,7 @@ export interface CountDownState { secondsRemaining : number };
 export class CountDown extends React.Component<CountDownProps, CountDownState> {
     
     private interval: number;
-    private state: CountDownState = {
+    state: CountDownState = {
         secondsRemaining: 0
     };
     
