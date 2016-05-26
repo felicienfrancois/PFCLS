@@ -1,10 +1,13 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import { Hello } from "./components/Hello";
-import { helloService } from "./services/HelloService";
+import { Hand } from "./models/Hand";
+import { Confirm } from "./components/Confirm";
+import { HandPick } from "./components/HandPick";
+import { CountDown } from "./components/CountDown";
+import { handService } from "./services/HandService";
 
-ReactDOM.render(
-    <Hello compiler={helloService.getCompiler()} framework={helloService.getFramework()} />,
-    document.getElementById("example")
-);
+let hands = [Hand.ROCK, Hand.PAPER, Hand.SCISSORS, Hand.LIZARD, Hand.SPOCK];
+let main = document.getElementById("main");
+let player1Hand : Hand;
+let player2Hand : Hand;
