@@ -2,16 +2,16 @@ import {Hand} from "../models/Hand";
 import {Winner} from "../models/Winner";
 
 export interface HandService {
-    match(player1: Hand, player2: Hand) : {winner: Winner, whatHappened: string};
+    match(player1: Hand, player2: Hand): {winner: Winner, whatHappened: string};
 }
 
 class HandServiceImpl implements HandService {
 
-    match(player1: Hand, player2: Hand) : {winner: Winner, whatHappened: string} {
+    match(player1: Hand, player2: Hand): {winner: Winner, whatHappened: string} {
         if (player1.equals(player2)) {
             return {
                 winner : Winner.DRAW,
-                whatHappened : "Egalité"
+                whatHappened : "Les deux joueurs ont choisi le mÃªme signe"
             };
         }
         if (player1.defeat[player2.id]) {
@@ -28,11 +28,11 @@ class HandServiceImpl implements HandService {
         }
         return {
             winner : Winner.UNKNOWN,
-            whatHappened : "Résultat inconnu"
+            whatHappened : "RÃ©sultat inconnu"
         };
     }
 
 }
 
 // singleton
-export var handService : HandService = new HandServiceImpl();
+export var handService: HandService = new HandServiceImpl();
