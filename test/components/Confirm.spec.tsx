@@ -13,4 +13,15 @@ describe("<Confirm />", function () {
     }>Some text</Confirm>) as Confirm;
     expect(ReactTestUtils.isCompositeComponent(confirm)).to.equals(true);
   });
+  it("call onConfirm when clicking button", function () {
+    // could also be implemented using sinon.spy()
+    let called: boolean = false;
+    const confirm = ReactTestUtils.renderIntoDocument(<Confirm title="Test title" buttonLabel="Test label" onConfirm={
+        function _onConfirm() {
+            called = true;
+        }
+    }>Some text</Confirm>) as Confirm;
+    ReactTestUtils.Simulate.click(confirm.refs["button"]);
+    expect(called).to.equals(true);
+  });
 });
