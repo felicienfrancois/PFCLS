@@ -1,9 +1,14 @@
 .HandPick {
+  list-style: none;
+}
 
+.HandPick li {
+  padding: 2px;
+  display: inline-block;
 }
 
 .HandPick button {
-
+  width: 240px;
 }
 
 .HandPick .rock {
