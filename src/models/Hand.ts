@@ -19,18 +19,18 @@ export class Hand {
         "rock" : "Spock vaporise la Pierre",
         "scissors" : "Spock casse les Ciseaux"
     });
-    
-    id : string;
-    name : string;
-    defeat : {[handId: string] : string};
-    
-    constructor(id: string, name : string, defeat: {[handId: string] : string}) {
+
+    id: string;
+    name: string;
+    defeat: {[handId: string]: string};
+
+    constructor(id: string, name: string, defeat: {[handId: string]: string}) {
         this.id = id;
         this.name = name;
         this.defeat = defeat;
     }
-    
-    equals(hand: Hand) : boolean {
+
+    equals(hand: Hand): boolean {
         return hand.id === this.id;
     }
 }
