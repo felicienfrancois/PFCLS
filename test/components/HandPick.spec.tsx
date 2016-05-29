@@ -5,7 +5,7 @@ import * as ReactTestUtils from "react-addons-test-utils";
 import { Hand } from "../../src/models/Hand";
 import { HandPick } from "../../src/components/HandPick";
 
-let hands = [Hand.ROCK, Hand.PAPER, Hand.SCISSORS, Hand.LIZARD, Hand.SPOCK];
+const hands : Hand[] = [Hand.ROCK, Hand.PAPER, Hand.SCISSORS, Hand.LIZARD, Hand.SPOCK];
 
 describe("<HandPick />", function () {
   it("renders", function () {
