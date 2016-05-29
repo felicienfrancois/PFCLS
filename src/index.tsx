@@ -13,6 +13,11 @@ const main = document.getElementById("main");
 let player1Hand: Hand;
 let player2Hand: Hand;
 
+// TODO: extract all views into separate files
+// TODO: split views and routing logic
+// TODO: test views & routing
+// TODO: extract localized labels into language files
+
 player1Turn();
 
 function player1Turn() {

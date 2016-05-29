@@ -1,3 +1,6 @@
+
+// TODO: put hand list into separate files
+
 export class Hand {
     static ROCK = new Hand("rock", "Pierre", {
         "lizard" : "La Pierre écrase le Lézard",

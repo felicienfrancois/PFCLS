@@ -5,6 +5,7 @@
 @import './components/CountDown.scss';
 
 main {
+  /* for now media queries are not required to makes it responsive */
   width: 90%;
   max-width: 800px;
   margin: auto;
