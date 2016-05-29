@@ -9,7 +9,7 @@ describe("<CountDown />", function () {
     const countDown = ReactTestUtils.renderIntoDocument(<CountDown secondsRemaining={5} />) as CountDown;
     expect(ReactTestUtils.isCompositeComponent(countDown)).to.equals(true);
   });
-  it(`call onEnd after timeout`, function (done) {
+  it(`calls onEnd after timeout`, function (done) {
     this.timeout(10000);
     let timeouts = [1, 2, 3];
     let testsPassed: number = 0;

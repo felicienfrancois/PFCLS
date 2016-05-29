@@ -13,7 +13,7 @@ describe("<HandPick />", function () {
     expect(ReactTestUtils.isCompositeComponent(handPick)).to.equals(true);
   });
   hands.forEach(function(hand) {
-    it(`call onPick when clicking hand ${hand}`, function () {
+    it(`calls onPick when clicking hand ${hand}`, function () {
       // could also be implemented using sinon.spy()
       let pickedHand: Hand;
       const handPick = ReactTestUtils.renderIntoDocument(<HandPick hands={hands} onPick={function onPick(hand) {
